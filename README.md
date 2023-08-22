@@ -1,8 +1,12 @@
-# Heroku Log S3
+# Decommissioned
+
+This project was decommissioned as part of the [sunset of legacy Juntos infrastructure](https://docs.google.com/document/d/1UKRXnEz2AiiiCwtjAX04C7-hRxmne_GvBfB8bcWaHJ0/edit).
+
+## Heroku Log S3
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## Configure
+### Configure
 
 Setup the following `ENV` (aka `heroku config:set`)
 
@@ -15,7 +19,7 @@ Setup the following `ENV` (aka `heroku config:set`)
 - `HTTP_USER`, `HTTP_PASSWORD` (default no password protection) credentials for HTTP Basic Authentication
 - `WRITER_LIB` (default `./writer/s3.rb`) defines the ruby script to load `Writer` class
 
-## Using
+### Using
 
 In your heroku app, add this drain (changing `HTTP_USER`, `HTTP_PASSWORD` and `DRAIN_APP_NAME` to appropriate values)
 
@@ -29,12 +33,12 @@ or if you have no password protection
 heroku drains:add https://DRAIN_APP_NAME.herokuapp.com/
 ```
 
-# Credits
+## Credits
 
 - https://github.com/rwdaigle/heroku-log-parser
 - https://github.com/rwdaigle/heroku-log-store
 
-# Alternatives
+## Alternatives
 
 - https://logbox.io a logs drain that forwards Heroku messages for a long‑term archival to AWS S3, Glacier or CloudWatch.
 - _{insert suggestions here}_
